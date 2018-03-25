@@ -1,0 +1,21 @@
+{
+  "name": "styled-components-units",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:DSchau/styled-components-units.git",
+  "author": "Dustin Schau <dustinschau@gmail.com> (https://dustinschau.com)",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "subpkg install",
+    "markdown": "md-magic --path README.md"
+  },
+  "dependencies": {
+    "subpackage": "~1.1.0"
+  },
+  "subPackages": [
+    "unit-01"
+  ],
+  "devDependencies": {
+    "markdown-magic": "~0.1.21"
+  }
+}
