@@ -9,7 +9,9 @@ module.exports = {
       const units = fs.readdirSync(base)
         .filter(fileOrDirectory => fs.statSync(path.join(base, fileOrDirectory)).isDirectory() && expr.test(fileOrDirectory))
         .map(unit => {
-          return `- [${unit}](${unit}/README.md)`;
+          const fullTitle = fs.readFileSync(path.join(base, unit, 'README.md'), 'utf8').split('\n').shift();
+          const title = fullTitle.slice(fullTitle.indexOf('-') + 1).trim();
+          return `- [${title}](${unit}/README.md)`;
         });
 
       return units.join('\n');

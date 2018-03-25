@@ -4,8 +4,8 @@ Contained within this repository are all the companion units (or lessons!) for l
 
 ## Units
 
-<!-- AUTO-GENERATED-CONTENT:START (UNITS:include=^unit-\d+$) -->
-  - [unit-01](unit-01/README.md)
+<!-- AUTO-GENERATED-CONTENT:START (UNITS:include=^\d+-.*$) -->
+- [Getting Started with styled-components](01-getting-started-with-styled-components/README.md)
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 [css-in-js-training]: https://css-in-js-training.dustinschau.com
