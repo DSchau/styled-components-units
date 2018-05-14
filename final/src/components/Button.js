@@ -5,8 +5,8 @@ const Button = styled.button`
 
 `;
 
-export default function ButtonComponent({ onClick }) {
+export default function ButtonComponent({ children, ...rest }) {
   return (
-    <Button onClick={onClick}>TODO: Make me a styled component</Button>
+    <Button {...rest}>children</Button>
   );
 }

@@ -6,6 +6,7 @@
   "dependencies": {
     "date-fns": "~1.29.0",
     "marked": "~0.3.19",
+    "normalize.css": "~8.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router": "~4.2.0",
