@@ -5,6 +5,7 @@ import marked from 'marked';
 
 const Container = styled.div`
   padding: 1rem;
+  margin: 0.25rem;
 
   border: 1px solid #EEE;
 `;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Container = styled.header`
   display: flex;
@@ -14,10 +15,16 @@ const Title = styled.h1`
   margin: 0;
 `;
 
+const StyledLink = styled(Link)`
+  color: inherit;
+
+  text-decoration: none;
+`;
+
 export default function Header() {
   return (
     <Container>
-      <Title>Your great blog</Title>
+      <Title><StyledLink to="/">Your great blog</StyledLink></Title>
     </Container>
   );
 }
