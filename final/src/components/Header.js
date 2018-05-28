@@ -2,9 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+import THEME from '../style/theme';
+
 const Container = styled.header`
   display: flex;
-  background-color: #2C3E50;
+  background-color: ${THEME.green.base};
 
   padding: 1rem 0.5rem;
 `;

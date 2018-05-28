@@ -20,6 +20,7 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
   width: 100%;
+  max-height: 100%;
 `;
 
 const Title = styled.h1`
@@ -35,6 +36,7 @@ const Title = styled.h1`
 `;
 
 const Content = styled.div`
+  flex: 1;
   padding: 1rem;
 `;
 

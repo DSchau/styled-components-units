@@ -5,6 +5,8 @@ import PlusIcon from 'react-icons/lib/fa/plus';
 
 import Button from './Button';
 
+import THEME from '../style/theme';
+
 const NewPostLink = styled(Button)`
   display: flex;
   align-items: center;
@@ -20,10 +22,23 @@ const NewPostLink = styled(Button)`
   font-size: 24px;
   text-align: center;
 
-  background-color: #E74C3C;
+  background-color: ${THEME.red.base};
   color: white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 
   text-decoration: none;
+  transition: 175ms ease-in-out;
+
+  :hover {
+    background-color: ${THEME.red.darker};
+    transform: translateY(-2px);
+  }
+
+  :active {
+    background-color: ${THEME.red.darker};
+    transform: translateY(-2px);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  }
 `.withComponent(Link);
 
 export default function NewPostButton() {

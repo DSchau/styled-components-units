@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { darken, lighten } from 'polished';
+
+import THEME from '../style/theme';
 
 const Button = styled.button`
   width: 100%;
@@ -8,25 +9,44 @@ const Button = styled.button`
   margin: 0.5rem 0.125rem;
 
   background-color: white;
-  color: #468966;
-  border: 2px solid #468966;
+  color: ${THEME.green.base};
+  border: 2px solid ${THEME.green.base};
   border-radius: 4px;
   font-size: 18px;
   cursor: pointer;
   transition: 175ms ease-in-out;
 
   :hover {
-    background-color: ${lighten(0.3, '#468966')};
-    color: white;
+    background-color: #eee;
+  }
+
+  :focus {
+    box-shadow: 0 0 4px ${THEME.green.base};
+    outline: none;
+  }
+
+  :active {
+    background-color: #ddd;
+    color: ${THEME.green.darker};
   }
 
   ${props => props.primary && css`
-    background-color: #468966;
+    background-color: ${THEME.green.base};
     color: white;
 
     :hover {
-      background-color: ${darken(0.1, '#468966')};
-      border-color: ${darken(0.1, '#468966')};
+      background-color: ${THEME.green.darker};
+      border-color: ${THEME.green.darker};
+    }
+
+    :focus {
+      box-shadow: 0 0 4px ${THEME.green.darkest};
+      outline: none;
+    }
+
+    :active {
+      background-color: ${THEME.green.darkest};
+      color: white;
     }
   `}
 `;
