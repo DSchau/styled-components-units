@@ -16,35 +16,18 @@ const ImageContainer = styled.div`
 
   position: relative;
   background-color: black;
-
-  height: 200px;
 `;
 
 const Image = styled.img`
   width: 100%;
-  height: 200px;
-
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-
-    background-color: red;
-  }
 `;
 
 const Title = styled.h1`
+  position: absolute;
   margin: 0;
   width: 100%;
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 0;
 
   z-index: 2;
 
