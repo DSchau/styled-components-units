@@ -13,6 +13,11 @@ const THEME = {
     base: '#E74C3C',
     darker: '#BE3021',
     darkest: '#931B0E'
+  },
+  blue: {
+    base: '#2196F3',
+    darker: '#1976D2',
+    darkest: '#0D47A1'
   }
 };
 
