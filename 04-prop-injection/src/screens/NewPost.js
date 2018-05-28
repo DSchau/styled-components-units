@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Formik } from 'formik';
+import * as yup from 'yup';
 
 import Button from '../components/Button';
 import Textarea from '../components/Textarea';
@@ -61,6 +62,11 @@ const ButtonContainer = styled.div`
   }
 `;
 
+const validationSchema = yup.object().shape({
+  content: yup.string().required(),
+  title: yup.string().required()
+});
+
 export default class NewPost extends Component {
   render() {
     return (
@@ -72,12 +78,14 @@ export default class NewPost extends Component {
             // note: this would normally make an API call
           }}
           initialValues={{ content: '', title: '' }}
+          validationSchema={validationSchema}
           render={({
             handleBlur,
             handleChange,
             handleReset,
             handleSubmit,
             isSubmitting,
+            isValid,
             values
           }) => (
             <Form onSubmit={handleSubmit}>
@@ -90,6 +98,7 @@ export default class NewPost extends Component {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.title}
+                  required
                 />
               </Label>
               <Label for="content">
@@ -101,13 +110,18 @@ export default class NewPost extends Component {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.content}
+                  required
                 />
               </Label>
               <ButtonContainer>
                 <Button type="reset" onClick={handleReset}>
                   Reset
                 </Button>
-                <Button type="submit" disabled={isSubmitting} primary>
+                <Button
+                  type="submit"
+                  disabled={!isValid || isSubmitting}
+                  primary
+                >
                   Submit
                 </Button>
               </ButtonContainer>
