@@ -9,7 +9,7 @@ const Container = styled.div`
   margin: auto;
   padding: 1rem;
 
-  border: 2px solid #EEE;
+  border: 2px solid #eee;
 
   @media only screen and (min-width: 768px) {
     max-width: 60%;
@@ -21,8 +21,8 @@ const Title = styled.h1`
   margin-bottom: 0.5rem;
   padding: 0.5rem 0.125rem;
 
-  border-top: 3px solid #CCC;
-  border-bottom: 3px solid #CCC;
+  border-top: 3px solid #ccc;
+  border-bottom: 3px solid #ccc;
   text-align: center;
 `;
 
@@ -62,22 +62,54 @@ export default class NewPost extends Component {
     return (
       <Container>
         <Title>Add a new post</Title>
-        <Formik initialValues={{ content: '', title: '' }} render={({ handleBlur, handleChange, handleReset, handleSubmit, isSubmitting, values }) => (
-          <Form onSubmit={handleSubmit}>
-            <Label for="title">
-              Title
-              <Input id="title" name="title" type="text" onChange={handleChange} onBlur={handleBlur} value={values.title} />
-            </Label>
-            <Label for="content">
-              Content
-              <StyledTextarea id="content" name="content" type="text" onChange={handleChange} onBlur={handleBlur} value={values.content} />
-            </Label>
-            <ButtonContainer>
-              <Button type="reset" onClick={handleReset}>Reset</Button>
-              <Button type="submit" disabled={isSubmitting} primary>Submit</Button>
-            </ButtonContainer>
-          </Form>
-        )} />
+        <Formik
+          onSubmit={(values, { setSubmitting, setErrors }) => {
+            setSubmitting(false);
+            // note: this would normally make an API call
+          }}
+          initialValues={{ content: '', title: '' }}
+          render={({
+            handleBlur,
+            handleChange,
+            handleReset,
+            handleSubmit,
+            isSubmitting,
+            values
+          }) => (
+            <Form onSubmit={handleSubmit}>
+              <Label for="title">
+                Title
+                <Input
+                  id="title"
+                  name="title"
+                  type="text"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.title}
+                />
+              </Label>
+              <Label for="content">
+                Content
+                <StyledTextarea
+                  id="content"
+                  name="content"
+                  type="text"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.content}
+                />
+              </Label>
+              <ButtonContainer>
+                <Button type="reset" onClick={handleReset}>
+                  Reset
+                </Button>
+                <Button type="submit" disabled={isSubmitting} primary>
+                  Submit
+                </Button>
+              </ButtonContainer>
+            </Form>
+          )}
+        />
       </Container>
     );
   }

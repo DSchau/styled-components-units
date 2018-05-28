@@ -1,5 +1,5 @@
 {
-  "name": "styled-components-units",
+  "name": "@dschau/styled-components-units",
   "private": true,
   "version": "1.0.0",
   "main": "index.js",
@@ -7,10 +7,17 @@
   "author": "Dustin Schau <dustinschau@gmail.com> (https://dustinschau.com)",
   "license": "MIT",
   "devDependencies": {
-    "markdown-magic": "~0.1.21"
+    "husky": "~0.14.3",
+    "markdown-magic": "~0.1.21",
+    "prettier": "~1.13.0",
+    "pretty-quick": "~1.6.0"
   },
   "scripts": {
+    "precommit": "pretty-quick --staged",
     "markdown": "md-magic --path README.md"
   },
-  "workspaces": ["01-getting-started-with-styling-components", "02-your-first-styled-component"]
+  "workspaces": [
+    "01-getting-started-with-styling-components",
+    "02-your-first-styled-component"
+  ]
 }
