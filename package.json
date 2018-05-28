@@ -20,6 +20,7 @@
     "01-getting-started-with-styling-components",
     "02-your-first-styled-component",
     "03-traditional-css",
+    "04-prop-injection",
     "final"
   ]
 }
