@@ -18,6 +18,8 @@
   },
   "workspaces": [
     "01-getting-started-with-styling-components",
-    "02-your-first-styled-component"
+    "02-your-first-styled-component",
+    "03-traditional-css",
+    "final"
   ]
 }
