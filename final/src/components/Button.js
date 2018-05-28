@@ -30,29 +30,34 @@ const Button = styled.button`
     color: ${THEME.green.darker};
   }
 
-  ${props => props.primary && css`
-    background-color: ${THEME.green.base};
-    color: white;
-
-    :hover {
-      background-color: ${THEME.green.darker};
-      border-color: ${THEME.green.darker};
-    }
-
-    :focus {
-      box-shadow: 0 0 4px ${THEME.green.darkest};
-      outline: none;
-    }
-
-    :active {
-      background-color: ${THEME.green.darkest};
+  ${props =>
+    props.primary &&
+    css`
+      background-color: ${THEME.green.base};
       color: white;
-    }
-  `}
+
+      :hover {
+        background-color: ${THEME.green.darker};
+        border-color: ${THEME.green.darker};
+      }
+
+      :focus {
+        box-shadow: 0 0 4px ${THEME.green.darkest};
+        outline: none;
+      }
+
+      :active {
+        background-color: ${THEME.green.darkest};
+        color: white;
+      }
+    `} ${props =>
+    props.disabled &&
+    css`
+      background-color: ${THEME.grey.darker};
+      cursor: not-allowed;
+    `};
 `;
 
 export default function ButtonComponent({ children, ...rest }) {
-  return (
-    <Button {...rest}>{children}</Button>
-  );
+  return <Button {...rest}>{children}</Button>;
 }
