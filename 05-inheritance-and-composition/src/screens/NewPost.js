@@ -114,7 +114,7 @@ export default class NewPost extends Component {
                 />
               </Label>
               <ButtonContainer>
-                <Button type="reset" onClick={handleReset}>
+                <Button type="reset" onClick={handleReset} destructive>
                   Reset
                 </Button>
                 <Button
