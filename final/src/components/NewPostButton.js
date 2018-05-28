@@ -1,10 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import PlusIcon from 'react-icons/lib/fa/plus';
 
 import Button from './Button';
 
 const NewPostLink = styled(Button)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   position: fixed;
   bottom: 0.5rem;
   right: 0.5rem;
@@ -12,8 +17,7 @@ const NewPostLink = styled(Button)`
   height: 32px;
   width: 32px;
   border-radius: 32px;
-  font-size: 32px;
-  line-height: 32px;
+  font-size: 24px;
   text-align: center;
 
   background-color: #E74C3C;
@@ -24,6 +28,6 @@ const NewPostLink = styled(Button)`
 
 export default function NewPostButton() {
   return (
-    <NewPostLink to="/new">+</NewPostLink>
+    <NewPostLink to="/new"><PlusIcon size={16} /></NewPostLink>
   );
 }

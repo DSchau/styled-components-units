@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Route } from 'react-router';
 
 import Layout from '../components/Layout';
 import NewPost from './NewPost';
 import Post from './Post';
 import Posts from './Posts';
-
-import posts from '../blog';
 
 export default function App() {
   return (

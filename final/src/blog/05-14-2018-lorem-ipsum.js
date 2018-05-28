@@ -1,3 +1,5 @@
+import latinImage from './images/latin.jpeg';
+
 export default `
 ## Repugnat loco
 
@@ -64,6 +66,7 @@ export const meta = {
     twitter: 'schaudustin'
   },
   description: `Lorem markdownum; actum iuvenes ex regibus aliasque non latos per dumque coxerat`,
+  image: latinImage,
   title: 'Repugnat loco',
   published: new Date('05/14/2018')
 };
