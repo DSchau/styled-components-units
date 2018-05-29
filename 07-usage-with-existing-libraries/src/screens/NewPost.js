@@ -12,7 +12,7 @@ const Container = styled.div`
   margin: auto;
   padding: 1rem;
 
-  ${SLIDE_IN}
+  ${SLIDE_IN};
   border: 2px solid #eee;
 
   @media only screen and (min-width: 768px) {
