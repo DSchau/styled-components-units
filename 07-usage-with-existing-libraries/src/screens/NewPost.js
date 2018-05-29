@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 
+import Alert from '../components/Alert';
 import Button from '../components/Button';
 import Textarea from '../components/Textarea';
 
@@ -71,14 +72,59 @@ const validationSchema = yup.object().shape({
 });
 
 export default class NewPost extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      status: ''
+    };
+  }
+
+  getStatusMessage(status) {
+    switch (status) {
+      case 'success':
+        return 'Thanks. We got your blog post!';
+      case 'error':
+        return 'Oh no. Something has gone wrong!';
+      default:
+        return null;
+    }
+  }
+
   render() {
+    const { status } = this.state;
+    const message = this.getStatusMessage(status);
     return (
       <Container>
         <Title>Add a new post</Title>
+        {message && (
+          <Alert success={status === 'success'} error={status === 'error'}>
+            {message}
+          </Alert>
+        )}
         <Formik
-          onSubmit={(values, { setSubmitting, setErrors }) => {
-            setSubmitting(false);
+          onReset={() => {
+            this.setState({
+              status: ''
+            });
+          }}
+          onSubmit={(values, { resetForm, setSubmitting, setErrors }) => {
             // note: this would normally make an API call
+            this.setState(
+              {
+                status: 'success'
+              },
+              () => {
+                resetForm();
+                setSubmitting(false);
+
+                setTimeout(() => {
+                  this.setState({
+                    status: ''
+                  });
+                }, 5000);
+              }
+            );
           }}
           initialValues={{ content: '', title: '' }}
           validationSchema={validationSchema}
