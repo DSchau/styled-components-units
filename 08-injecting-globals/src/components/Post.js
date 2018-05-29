@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled, { injectGlobal } from 'styled-components';
+import styled from 'styled-components';
 import marked from 'marked';
 
 import { FADE_IN } from '../style/animations';
@@ -64,8 +64,3 @@ export default function Post({ markdown = '', meta = {}, preview }) {
     </Container>
   );
 }
-
-// TODO: add global styles to the post content
-injectGlobal`
-
-`;

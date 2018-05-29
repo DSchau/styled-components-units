@@ -7,6 +7,10 @@ import posts, { getPostBySlug } from '../blog';
 
 const Container = styled.div``;
 
+Container.defaultProps = {
+  className: 'post'
+};
+
 export default function PostById({ match }) {
   const post = getPostBySlug(match.params.slug, posts);
   if (!post) {
@@ -17,5 +21,11 @@ export default function PostById({ match }) {
     );
   }
 
-  return <Post {...post} />;
+  return (
+    <Container>
+      <Post {...post} />
+    </Container>
+  );
 }
+
+// TODO: injectGlobal css targeting post content
