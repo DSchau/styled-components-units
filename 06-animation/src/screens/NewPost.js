@@ -6,6 +6,7 @@ import * as yup from 'yup';
 import Button from '../components/Button';
 import Textarea from '../components/Textarea';
 
+// TODO: add SLIDE_IN animation to Container
 const Container = styled.div`
   margin: auto;
   padding: 1rem;

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import marked from 'marked';
 
+// TODO: add FADE_IN or SLIDE_IN mixin
+
 const Container = styled.div`
   margin: 0.25rem;
 
@@ -36,7 +38,6 @@ const Title = styled.h1`
 `;
 
 const Content = styled.div`
-  flex: 1;
   padding: 1rem;
 `;
 

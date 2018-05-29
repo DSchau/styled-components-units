@@ -5,6 +5,8 @@ import posts from '../blog';
 import Post from '../components/Post';
 import NewPostButton from '../components/NewPostButton';
 
+// TODO: add SLIDE_IN or FADE_IN animation
+
 const Container = styled.div``;
 
 const Grid = styled.div`
