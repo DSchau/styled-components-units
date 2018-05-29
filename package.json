@@ -23,6 +23,7 @@
     "04-prop-injection",
     "05-inheritance-and-composition",
     "06-animation",
+    "07-usage-with-existing-libraries",
     "final"
   ]
 }
