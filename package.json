@@ -25,6 +25,7 @@
     "06-animation",
     "07-usage-with-existing-libraries",
     "08-injecting-globals",
+    "09-server-rendering",
     "final"
   ]
 }
