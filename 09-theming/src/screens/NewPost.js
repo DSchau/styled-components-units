@@ -39,7 +39,7 @@ const Label = styled.label`
   font-size: 12px;
   text-transform: uppercase;
 
-  color: #333;
+  color: ${props => props.theme.base.color};
   margin-bottom: 0.5rem;
 
   :last-child {

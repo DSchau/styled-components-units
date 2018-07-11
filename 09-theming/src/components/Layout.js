@@ -7,6 +7,8 @@ const Container = styled.div`
   background-color: ${props => props.theme.base.bg};
   color: ${props => props.theme.base.color};
   font-family: sans-serif;
+
+  min-height: 100vh;
 `;
 
 const Content = styled.main`
