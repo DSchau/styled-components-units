@@ -4,6 +4,7 @@ import { StaticRouter } from 'react-router-dom';
 
 import path from 'path';
 import fs from 'fs-extra';
+import cheerio from 'cheerio';
 
 import App from '../../src/screens/App';
 
@@ -12,6 +13,8 @@ export const renderer = async (req, res) => {
 
   try {
     const htmlTemplate = await fs.readFile(filePath, 'utf8');
+
+    const $ = cheerio.load(htmlTemplate);
 
     const context = {};
     const html = ReactDOMServer.renderToString(
@@ -24,12 +27,9 @@ export const renderer = async (req, res) => {
       return res.redirect(301, context.url);
     }
 
-    return res.send(
-      htmlTemplate.replace(
-        '<div id="root"></div>',
-        `<div id="root">${html}</div>`
-      )
-    );
+    $('#root').html(html);
+
+    return res.send($.html());
   } catch (e) {
     console.error(e.stack);
     return;

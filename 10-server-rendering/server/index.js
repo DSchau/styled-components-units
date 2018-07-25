@@ -10,9 +10,7 @@ const router = express.Router();
 
 router.use('^/$', renderer);
 
-router.use(
-  express.static(path.resolve(__dirname, '../build'), { maxAge: '30d' })
-);
+router.use(express.static(path.resolve('build'), { maxAge: '30d' }));
 
 router.use('*', renderer);
 
