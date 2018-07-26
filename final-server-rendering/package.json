@@ -5,6 +5,7 @@
   "author": "Dustin Schau <dustinschau@gmail.com> (https://dustinschau.com)",
   "dependencies": {
     "autosize": "~4.0.2",
+    "babel-plugin-styled-components": "~1.5.1",
     "bootstrap": "~4.1.1",
     "cheerio": "~1.0.0-rc.2",
     "date-fns": "~1.29.0",
