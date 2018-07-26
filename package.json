@@ -27,6 +27,7 @@
     "08-injecting-globals",
     "09-theming",
     "10-server-rendering",
+    "11-utility-libraries",
     "final"
   ]
 }
