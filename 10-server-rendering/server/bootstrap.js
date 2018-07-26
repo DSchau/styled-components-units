@@ -9,7 +9,8 @@ register(undefined, (module, filename) => {
   if (images.some(expr => expr.test(filename))) {
     const ext = filename.split('.').pop();
     const file = path.basename(filename);
-    const asset = manifest[Object.keys(manifest).find(key => key.includes(file))];
+    const asset =
+      manifest[Object.keys(manifest).find(key => key.includes(file))];
     module.exports = `/${asset}`;
   }
 });

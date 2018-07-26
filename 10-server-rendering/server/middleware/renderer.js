@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
+// TODO: implement server rendering with styled-components
 
 import path from 'path';
 import fs from 'fs-extra';
