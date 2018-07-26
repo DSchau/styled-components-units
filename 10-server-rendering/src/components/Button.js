@@ -1,10 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import THEME from '../style/theme';
-
 const Button = styled.button`
-  background-color: ${THEME.green.base};
+  background-color: ${props => props.theme.green.base};
   color: white;
   border: none;
   border-radius: 6px;
@@ -18,36 +16,36 @@ const Button = styled.button`
   transition: 175ms ease-in-out;
 
   :hover {
-    background-color: ${THEME.green.darker};
+    background-color: ${props => props.theme.green.darker};
   }
 
   :active {
-    background-color: ${THEME.green.darkest};
+    background-color: ${props => props.theme.green.darkest};
   }
 
   :focus {
     outline: none;
-    box-shadow: 0 0 8px ${THEME.green.base};
+    box-shadow: 0 0 8px ${props => props.theme.green.base};
   }
 
   ${props =>
     props.primary &&
     css`
-      background-color: ${THEME.green.base};
+      background-color: ${props => props.theme.green.base};
       color: white;
 
       :hover {
-        background-color: ${THEME.green.darker};
-        border-color: ${THEME.green.darker};
+        background-color: ${props => props.theme.green.darker};
+        border-color: ${props => props.theme.green.darker};
       }
 
       :focus {
-        box-shadow: 0 0 4px ${THEME.green.darkest};
+        box-shadow: 0 0 4px ${props => props.theme.green.darkest};
         outline: none;
       }
 
       :active {
-        background-color: ${THEME.green.darkest};
+        background-color: ${props => props.theme.green.darkest};
         color: white;
       }
     `}
@@ -55,31 +53,31 @@ const Button = styled.button`
   ${props =>
     props.destructive &&
     css`
-      background-color: ${THEME.red.base};
+      background-color: ${props => props.theme.red.base};
 
       :hover {
-        background-color: ${THEME.red.darker};
+        background-color: ${props => props.theme.red.darker};
       }
 
       :active {
-        background-color: ${THEME.red.darkest};
+        background-color: ${props => props.theme.red.darkest};
       }
 
       :focus {
-        box-shadow: 0 0 4px ${THEME.red.base};
+        box-shadow: 0 0 4px ${props => props.theme.red.base};
       }
     `}
 
   ${props =>
     props.disabled &&
     css`
-      background-color: ${THEME.grey.darker};
+      background-color: ${props => props.theme.grey.darker};
       color: #666;
       cursor: not-allowed;
 
       :hover,
       :active {
-        background-color: ${THEME.grey.darker};
+        background-color: ${props => props.theme.grey.darker};
       }
     `}
 `;

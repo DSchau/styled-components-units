@@ -37,10 +37,10 @@ injectGlobal`
   }
 
   .post p > a {
-    color: ${THEME.green.base};
+    color: ${THEME.light.green.base};
 
     :hover {
-      color: ${THEME.green.darker};
+      color: ${THEME.light.green.darker};
     }
   }
 `;

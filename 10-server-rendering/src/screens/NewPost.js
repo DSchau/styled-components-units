@@ -26,8 +26,8 @@ const Title = styled.h1`
   margin-bottom: 0.5rem;
   padding: 0.5rem 0.125rem;
 
-  border-top: 3px solid #ccc;
-  border-bottom: 3px solid #ccc;
+  border-top: 3px solid ${props => props.theme.base.color};
+  border-bottom: 3px solid ${props => props.theme.base.color};
   text-align: center;
 `;
 
@@ -39,7 +39,7 @@ const Label = styled.label`
   font-size: 12px;
   text-transform: uppercase;
 
-  color: #333;
+  color: ${props => props.theme.base.color};
   margin-bottom: 0.5rem;
 
   :last-child {

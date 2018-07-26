@@ -27,7 +27,7 @@
     "prestart": "npm run build:client",
     "start": "cross-env NODE_ENV=development node server/bootstrap.js",
     "start:client": "react-scripts start",
-    "build:client": "react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
