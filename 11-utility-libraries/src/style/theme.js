@@ -1,3 +1,5 @@
+import { darken, invert } from 'polished';
+
 const COLORS = {
   base: '#222',
   text: '#eee',
@@ -15,23 +17,23 @@ const THEME = {
     },
     grey: {
       base: COLORS.grey,
-      darker: '#AAA',
-      darkest: '#999'
+      darker: darken(0.2, COLORS.grey),
+      darkest: darken(0.4, COLORS.grey)
     },
     green: {
       base: COLORS.green,
-      darker: '#35674D',
-      darkest: '#1D5D3B'
+      darker: darken(0.2, COLORS.green),
+      darkest: darken(0.4, COLORS.green)
     },
     red: {
       base: COLORS.red,
-      darker: '#d43525',
-      darkest: '#E74C3C'
+      darker: darken(0.2, COLORS.red),
+      darkest: darken(0.4, COLORS.red)
     },
     blue: {
       base: COLORS.blue,
-      darker: '#1976D2',
-      darkest: '#0D47A1'
+      darker: darken(0.2, COLORS.blue),
+      darkest: darken(0.4, COLORS.blue)
     }
   },
   light: {
