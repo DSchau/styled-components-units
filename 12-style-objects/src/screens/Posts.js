@@ -23,7 +23,12 @@ export default function Posts() {
       <FlexContainer>
         {posts.map(post => (
           <Box key={post.meta.slug} width={[1, 1 / 3]} px={2}>
-            <Post markdown={post.markdown} meta={post.meta} preview />
+            <Post
+              markdown={post.markdown}
+              meta={post.meta}
+              preview
+              interactive
+            />
           </Box>
         ))}
       </FlexContainer>
