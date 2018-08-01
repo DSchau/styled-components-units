@@ -1,26 +1,35 @@
+const COLORS = {
+  base: '#222',
+  text: '#eee',
+  grey: '#ccc',
+  green: '#1D5D3B',
+  red: '#e05a4c',
+  blue: '#2196F3'
+};
+
 const THEME = {
   dark: {
     base: {
-      bg: '#222',
-      color: '#eee'
+      bg: COLORS.base,
+      color: COLORS.text
     },
     grey: {
-      base: '#CCC',
+      base: COLORS.grey,
       darker: '#AAA',
       darkest: '#999'
     },
     green: {
-      base: '#1D5D3B',
+      base: COLORS.green,
       darker: '#35674D',
       darkest: '#1D5D3B'
     },
     red: {
-      base: '#e05a4c',
+      base: COLORS.red,
       darker: '#d43525',
       darkest: '#E74C3C'
     },
     blue: {
-      base: '#2196F3',
+      base: COLORS.blue,
       darker: '#1976D2',
       darkest: '#0D47A1'
     }
