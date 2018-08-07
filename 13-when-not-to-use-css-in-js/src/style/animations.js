@@ -1,6 +1,6 @@
 import { css, keyframes } from 'styled-components';
 
-export const SLIDE_IN_ANIMATION = keyframes`
+const SLIDE_IN_ANIMATION = keyframes`
   from {
     opacity: 0;
     transform: translateY(50vh);
@@ -11,7 +11,7 @@ export const SLIDE_IN_ANIMATION = keyframes`
   }
 `;
 
-export const FADE_IN_ANIMATION = keyframes`
+const FADE_IN_ANIMATION = keyframes`
   from {
     opacity: 0;
   }

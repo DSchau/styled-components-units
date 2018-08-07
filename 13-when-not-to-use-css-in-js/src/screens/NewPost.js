@@ -21,14 +21,15 @@ const Container = styled.div`
   }
 `;
 
-const Title = styled.h1(props => ({
-  margin: 0,
-  marginBottom: '0.5rem',
-  padding: '0.5rem 0.125rem',
-  textAlign: 'center',
-  borderTop: `3px solid ${props.theme.base.color}`,
-  borderBottom: `3px solid ${props.theme.base.color}`
-}));
+const Title = styled.h1`
+  margin: 0;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.125rem;
+
+  border-top: 3px solid ${props => props.theme.base.color};
+  border-bottom: 3px solid ${props => props.theme.base.color};
+  text-align: center;
+`;
 
 const Form = styled.form``;
 
@@ -137,7 +138,7 @@ export default class NewPost extends Component {
             values
           }) => (
             <Form onSubmit={handleSubmit}>
-              <Label htmlFor="title">
+              <Label for="title">
                 Title
                 <Input
                   id="title"
@@ -149,7 +150,7 @@ export default class NewPost extends Component {
                   required
                 />
               </Label>
-              <Label htmlFor="content">
+              <Label for="content">
                 Content
                 <StyledTextarea
                   id="content"

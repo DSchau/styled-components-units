@@ -29,6 +29,7 @@
     "10-server-rendering",
     "11-utility-libraries",
     "12-style-objects",
+    "13-when-not-to-use-css-in-js",
     "final",
     "final-server-rendered"
   ]
