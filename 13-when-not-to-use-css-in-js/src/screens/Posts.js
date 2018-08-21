@@ -7,15 +7,16 @@ import posts from '../blog';
 import Post from '../components/Post';
 import NewPostButton from '../components/NewPostButton';
 
+import { DIMENSIONS } from '../style/dimensions';
+
 const Container = styled.div``;
 
-const FlexContainer = styled(Flex)`
-  flex-direction: column;
-
-  @media only screen and (min-width: 32em) {
-    flex-direction: row;
-  }
-`;
+const FlexContainer = styled(Flex)({
+  flexDirection: 'column',
+  ...DIMENSIONS.greaterThan('medium')({
+    flexDirection: 'row'
+  })
+});
 
 export default function Posts() {
   return (
