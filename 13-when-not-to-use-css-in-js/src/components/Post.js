@@ -28,8 +28,8 @@ const Highlight = styled.div`
   height: 100%;
   transition: 0.25s ease;
   background: radial-gradient(
-    100px at 50%,
-    rgba(255, 255, 255, 0.5) 0%,
+    closest-side at 50% 50%,
+    rgba(255, 255, 255, 0.25) 0%,
     rgba(255, 255, 255, 0) 100%
   );
   pointer-events: none;
