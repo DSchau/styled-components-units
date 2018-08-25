@@ -64,7 +64,7 @@ const StyledLink = styled(Link)`
   color: inherit;
   text-decoration: none;
   display: inline-block;
-  transition: all 175ms ease-in-out;
+  transition: all 250ms ease-in-out;
   ${props => css`
     box-shadow: ${props.y * -1}px ${props.x + 10}px 25px 0 rgba(0, 0, 0, 0.25)};
     transform: rotateX(${props.offset * props.x}deg) rotateY(${props.offset *
