@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import marked from 'marked';
 import debounce from 'lodash.debounce';
 
@@ -18,6 +18,26 @@ const ImageContainer = styled.div`
 
   position: relative;
   background-color: black;
+`;
+
+const Highlight = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.25s ease;
+  background: radial-gradient(
+    200px at 50%,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  pointer-events: none;
+
+  ${props => css`
+    opacity: ${props.opacity};
+    transform: ${props.transform};
+  `};
 `;
 
 const Image = styled.img`
@@ -43,8 +63,13 @@ const Content = styled.div`
 const StyledLink = styled(Link)`
   color: inherit;
   text-decoration: none;
-
-  :hover {
+  display: inline-block;
+  transition: all 175ms ease-in-out;
+  ${props => css`
+    box-shadow: ${props.y * -1}px ${props.x + 10}px 25px 0 rgba(0, 0, 0, 0.25)};
+    transform: rotateX(${props.offset * props.x}deg) rotateY(${props.offset *
+    props.y}deg)};
+  `} :hover {
     color: inherit;
     text-decoration: none;
   }
@@ -52,10 +77,11 @@ const StyledLink = styled(Link)`
 
 export default class Post extends Component {
   static defaultProps = {
-    interactive: false
+    interactive: false,
+    offset: -2
   };
 
-  state = { x: 0, y: 0 };
+  state = { x: 0, y: 0, highlightOpacity: 0 };
 
   componentDidMount() {
     if (this.props.interactive) {
@@ -83,27 +109,41 @@ export default class Post extends Component {
     const y = (width - eventX) * (TILT / width) * -1;
     this.setState({
       x,
-      y
+      y,
+      highlightOpacity: 1
     });
   }, 15);
 
   handleMouseOut = debounce(() => {
     this.setState({
       x: 0,
-      y: 0
+      y: 0,
+      highlightOpacity: 0
     });
   }, 50);
 
-  /*
-   * box-shadow: ${y * -1}px ${x + 10}px 25px 0 rgba(0, 0, 0, 0.25)
-   */
   render() {
-    const { x, y } = this.state;
-    const { markdown = '', meta = {}, interactive, preview } = this.props;
+    const { highlightOpacity, x, y } = this.state;
+    const {
+      markdown = '',
+      meta = {},
+      offset,
+      interactive,
+      preview
+    } = this.props;
     const html = preview ? meta.description : marked(markdown);
     const Wrapper = interactive ? StyledLink : React.Fragment;
     return (
-      <Wrapper {...(interactive ? { to: `/posts/${meta.slug}` } : {})}>
+      <Wrapper
+        {...(interactive
+          ? {
+              to: `/posts/${meta.slug}`,
+              x,
+              y,
+              offset
+            }
+          : {})}
+      >
         <Container innerRef={node => (this.container = node)}>
           <ImageContainer>
             <Image src={meta.image} />
@@ -111,6 +151,10 @@ export default class Post extends Component {
           </ImageContainer>
           <Content dangerouslySetInnerHTML={{ __html: html }} />
         </Container>
+        <Highlight
+          opacity={highlightOpacity}
+          transform={`translate3d(${x * offset * 2}px, ${y * offset * 2}px, 0)`}
+        />
       </Wrapper>
     );
   }
