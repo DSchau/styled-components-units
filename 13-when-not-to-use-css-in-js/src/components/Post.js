@@ -9,6 +9,7 @@ import { FADE_IN } from '../style/animations';
 const Container = styled.div`
   transition: 250ms ease-out;
   ${FADE_IN} border: 1px solid #eee;
+  margin: 1rem 0;
 `;
 
 const ImageContainer = styled.div`
