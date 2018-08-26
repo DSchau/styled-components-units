@@ -7,15 +7,22 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --env.environment production",
-    "start": "webpack-dev-server --env.environment development --port 3000"
+    "start": "webpack-dev-server --env.environment development --port 3000 --hot --inline"
   },
   "devDependencies": {
     "@babel/core": "~7.0.0-rc.3",
     "@babel/preset-env": "~7.0.0-rc.3",
+    "@babel/preset-react": "~7.0.0-rc.3",
     "babel-loader": "~8.0.0-beta.6",
     "html-webpack-plugin": "~4.0.0-alpha",
+    "mini-css-extract-plugin": "~0.4.2",
     "webpack": "~4.17.1",
     "webpack-cli": "~3.1.0",
-    "webpack-dev-server": "~3.1.6"
+    "webpack-dev-server": "~3.1.6",
+    "webpack-merge": "~4.1.4"
+  },
+  "dependencies": {
+    "react": "~16.4.2",
+    "react-dom": "~16.4.2"
   }
 }

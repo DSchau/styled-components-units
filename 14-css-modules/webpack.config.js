@@ -1,9 +1,10 @@
 const path = require('path');
+const merge = require('webpack-merge');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = function webpackConfig({ environment }) {
-  return [
+  const options = [
     {
       mode: 'production',
       devtool: 'source-map',
@@ -22,7 +23,11 @@ module.exports = function webpackConfig({ environment }) {
           }
         ]
       },
-      plugins: [new HtmlWebpackPlugin()]
+      plugins: [
+        new HtmlWebpackPlugin({
+          template: path.join(__dirname, 'public/index.html')
+        })
+      ]
     }
   ]
     .concat(
@@ -34,6 +39,7 @@ module.exports = function webpackConfig({ environment }) {
       environment === 'production'
         ? [require('./webpack.config.production')]
         : []
-    )
-    .reduce((merged, config) => Object.assign(merged, config), {});
+    );
+
+  return merge.smart(options);
 };
