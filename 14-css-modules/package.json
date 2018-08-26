@@ -1,0 +1,21 @@
+{
+  "name": "css-modules",
+  "private": true,
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Dustin Schau <dustinschau@gmail.com> (https://dustinschau.com)",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --env.environment production",
+    "start": "webpack-dev-server --env.environment development --port 3000"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.0.0-rc.3",
+    "@babel/preset-env": "~7.0.0-rc.3",
+    "babel-loader": "~8.0.0-beta.6",
+    "html-webpack-plugin": "~4.0.0-alpha",
+    "webpack": "~4.17.1",
+    "webpack-cli": "~3.1.0",
+    "webpack-dev-server": "~3.1.6"
+  }
+}
