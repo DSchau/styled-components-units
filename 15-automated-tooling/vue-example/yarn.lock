@@ -672,7 +672,7 @@
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@vue/cli-overlay/-/cli-overlay-3.0.2.tgz#18411420798135295fe80523579b22e4c6bb3d3b"
 
-"@vue/cli-plugin-babel@^3.0.2":
+"@vue/cli-plugin-babel@^3.0.1":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@vue/cli-plugin-babel/-/cli-plugin-babel-3.0.2.tgz#88eb65e1915c23fe39d93dfa44f340082db34d56"
   dependencies:
@@ -680,7 +680,7 @@
     "@vue/babel-preset-app" "^3.0.1"
     babel-loader "^8.0.0-0"
 
-"@vue/cli-plugin-eslint@^3.0.2":
+"@vue/cli-plugin-eslint@^3.0.1":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@vue/cli-plugin-eslint/-/cli-plugin-eslint-3.0.2.tgz#714a3d612364a215309f28c630f930bac24f66d1"
   dependencies:
@@ -690,7 +690,7 @@
     eslint-loader "^2.0.0"
     eslint-plugin-vue "^4.5.0"
 
-"@vue/cli-service@^3.0.2":
+"@vue/cli-service@^3.0.1":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@vue/cli-service/-/cli-service-3.0.2.tgz#a942183eae39c4d15d22660c07374bb7e5edc99a"
   dependencies:
