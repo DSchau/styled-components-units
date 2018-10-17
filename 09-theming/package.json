@@ -17,7 +17,7 @@
     "react-router-dom": "~4.2.2",
     "react-scripts": "1.1.1",
     "slugify": "~1.2.9",
-    "styled-components": "~3.4.1",
+    "styled-components": "~4.0.0",
     "yup": "~0.25.1"
   },
   "scripts": {
