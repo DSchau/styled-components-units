@@ -64,7 +64,7 @@ module.exports = {
             .split('\n')
             .shift();
           const title = fullTitle.slice(fullTitle.indexOf('#') + 1).trim();
-          return `- [${title}](${unit}/README.md)`;
+          return `- [${title}](projects/${unit}/README.md)`;
         });
 
       return units.join('\n');
