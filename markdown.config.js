@@ -17,6 +17,8 @@ module.exports = {
       const relative = path.relative(process.cwd(), originalPath);
       const folder = path.basename(path.dirname(relative));
       return stripIndent`
+        ## 🚀 Getting Started
+
         This project is distributed as a monorepo utilizing [yarn workspaces][workspaces]
 
         As such, the best course of action is to navigate to the root of this repo, and run \`yarn\`. This will install all the necessary dependencies and get you up and running with styled-components and React!
@@ -29,7 +31,7 @@ module.exports = {
 
         ---
 
-        ## Alternative Approach
+        ### 🤔 Alternative Approach
 
         [CodeSandbox][code-sandbox] is a great, online IDE that can simplify some of the pain of getting set up locally.
 
