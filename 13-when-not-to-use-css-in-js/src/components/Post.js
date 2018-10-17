@@ -145,7 +145,7 @@ export default class Post extends Component {
             }
           : {})}
       >
-        <Container innerRef={node => (this.container = node)}>
+        <Container ref={node => (this.container = node)}>
           <ImageContainer>
             <Image src={meta.image} />
             <Title>{meta.title}</Title>
