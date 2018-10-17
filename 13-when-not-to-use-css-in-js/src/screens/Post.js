@@ -13,18 +13,16 @@ Container.defaultProps = {
 
 export default function PostById({ match }) {
   const post = getPostBySlug(match.params.slug, posts);
-  if (!post) {
-    return <Container />;
-  }
 
   return (
     <Container>
-      {post ? <Post {...post} /> : <h1>Could not find a post with that id</h1>}
+      <PostStyle />
+      {post ? <Post {...post} /> : <h1>Post not found</h1>}
     </Container>
   );
 }
 
-export const PostStyle = createGlobalStyle`
+const PostStyle = createGlobalStyle`
   .post h1 {
     margin: 0.5rem;
     padding-bottom: 0.25rem;

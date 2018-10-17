@@ -1,10 +1,9 @@
 import React from 'react';
-import styled, { injectGlobal } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 import Post from '../components/Post';
 
 import posts, { getPostBySlug } from '../blog';
-import THEME from '../style/theme';
 
 const Container = styled.div``;
 
@@ -14,18 +13,16 @@ Container.defaultProps = {
 
 export default function PostById({ match }) {
   const post = getPostBySlug(match.params.slug, posts);
-  if (!post) {
-    return <Container />;
-  }
 
   return (
     <Container>
-      {post ? <Post {...post} /> : <h1>Could not find a post with that id</h1>}
+      <PostStyle />
+      {post ? <Post {...post} /> : <h1>Post not found</h1>}
     </Container>
   );
 }
 
-injectGlobal`
+const PostStyle = createGlobalStyle`
   .post h1 {
     margin: 0.5rem;
     padding-bottom: 0.25rem;
@@ -37,10 +34,10 @@ injectGlobal`
   }
 
   .post p > a {
-    color: ${THEME.light.green.base};
+    color: ${props => props.theme.green.base};
 
     :hover {
-      color: ${THEME.light.green.darker};
+      color: ${props => props.theme.green.darker};
     }
   }
 `;

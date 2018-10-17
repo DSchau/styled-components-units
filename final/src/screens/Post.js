@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 import Post from '../components/Post';
 
@@ -7,17 +7,37 @@ import posts, { getPostBySlug } from '../blog';
 
 const Container = styled.div``;
 
+Container.defaultProps = {
+  className: 'post'
+};
+
 export default function PostById({ match }) {
   const post = getPostBySlug(match.params.slug, posts);
-  if (!post) {
-    return (
-      <Container>
-        <h1>Could not find a post with that id</h1>
-      </Container>
-    );
-  }
 
   return (
-    <Post {...post} />
+    <Container>
+      <PostStyle />
+      {post ? <Post {...post} /> : <h1>Post not found</h1>}
+    </Container>
   );
 }
+
+const PostStyle = createGlobalStyle`
+  .post h1 {
+    margin: 0.5rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid #EEE;
+  }
+
+  .post img {
+    max-width: 100%;
+  }
+
+  .post p > a {
+    color: ${props => props.theme.green.base};
+
+    :hover {
+      color: ${props => props.theme.green.darker};
+    }
+  }
+`;
