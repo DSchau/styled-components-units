@@ -43,7 +43,7 @@
   dependencies:
     "@babel/types" "7.0.0-rc.3"
 
-"@babel/helper-annotate-as-pure@^7.0.0":
+"@babel/helper-annotate-as-pure@^7.0.0", "@babel/helper-annotate-as-pure@^7.0.0-beta.37":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/helper-annotate-as-pure/-/helper-annotate-as-pure-7.0.0.tgz#323d39dd0b50e10c7c06ca7d7638e6864d8c5c32"
   dependencies:
@@ -1422,6 +1422,14 @@ babel-plugin-jest-hoist@^23.2.0:
   dependencies:
     "@babel/helper-annotate-as-pure" "^7.0.0"
     lodash "^4.17.10"
+
+babel-plugin-styled-components@~1.5.1:
+  version "1.5.1"
+  resolved "http://registry.npmjs.org/babel-plugin-styled-components/-/babel-plugin-styled-components-1.5.1.tgz#31dbeb696d1354d1585e60d66c7905f5e474afcd"
+  dependencies:
+    "@babel/helper-annotate-as-pure" "^7.0.0-beta.37"
+    babel-types "^6.26.0"
+    stylis "^3.0.0"
 
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
@@ -8732,6 +8740,10 @@ styled-system@^3.0.1:
 stylis-rule-sheet@^0.0.10:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/stylis-rule-sheet/-/stylis-rule-sheet-0.0.10.tgz#44e64a2b076643f4b52e5ff71efc04d8c3c4a430"
+
+stylis@^3.0.0:
+  version "3.5.3"
+  resolved "https://registry.yarnpkg.com/stylis/-/stylis-3.5.3.tgz#99fdc46afba6af4deff570825994181a5e6ce546"
 
 stylis@^3.5.0:
   version "3.5.0"
