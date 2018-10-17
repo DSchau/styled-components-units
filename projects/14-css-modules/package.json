@@ -11,14 +11,14 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@babel/core": "~7.0.0-rc.3",
-    "@babel/preset-env": "~7.0.0-rc.3",
-    "@babel/preset-react": "~7.0.0-rc.3",
+    "@babel/core": "~7.1.2",
+    "@babel/preset-env": "~7.1.0",
+    "@babel/preset-react": "~7.0.0",
     "babel-core": "^7.0.0-0",
-    "babel-jest": "~23.4.2",
-    "babel-loader": "~8.0.0-beta.6",
+    "babel-jest": "~23.6.0",
+    "babel-loader": "~8.0.4",
     "html-webpack-plugin": "~4.0.0-alpha",
-    "jest": "~23.5.0",
+    "jest": "~23.6.0",
     "mini-css-extract-plugin": "~0.4.2",
     "webpack": "~4.17.1",
     "webpack-cli": "~3.1.0",
@@ -26,7 +26,13 @@
     "webpack-merge": "~4.1.4"
   },
   "dependencies": {
-    "react": "~16.4.2",
-    "react-dom": "~16.4.2"
-  }
+    "react": "~16.5.2",
+    "react-dom": "~16.5.2"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
