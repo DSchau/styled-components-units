@@ -1,28 +1,23 @@
 const path = require('path');
 const fs = require('fs');
-
-const stripIndent = (parts, ...replacements) => {
-  return parts.reduce((str, part, index) => {
-    return str + part.replace(/(\n+)\s+/g, '$1') + (replacements[index] || '');
-  }, '');
-};
+const stripIndent = require('strip-indent');
 
 module.exports = {
   transforms: {
     INSTRUCTIONS(content, options, { originalPath } = {}) {
       const relative = path.relative(process.cwd(), originalPath);
       const [folder] = relative.split(path.basename(relative));
-      return stripIndent`
+      return stripIndent(`
         ## 🚀 Getting Started
 
         This project is distributed as a monorepo utilizing [yarn workspaces][workspaces]
 
         As such, the best course of action is to navigate to the root of this repo, and simply type the following command:
-        
+
         \`\`\`bash
         yarn
         \`\`\`
-        
+
         This will install all the necessary dependencies and get you up and running with styled-components and React!
 
         Once dependencies are installed:
@@ -42,7 +37,7 @@ module.exports = {
 
         [workspaces]: https://yarnpkg.com/lang/en/docs/workspaces/
         [code-sandbox]: https://codesandbox.io/
-      `;
+      `);
     },
     UNITS(content, options) {
       const expr = new RegExp(options.include);

@@ -10,7 +10,8 @@
     "husky": "~0.14.3",
     "markdown-magic": "~0.1.21",
     "prettier": "~1.13.0",
-    "pretty-quick": "~1.6.0"
+    "pretty-quick": "~1.6.0",
+    "strip-indent": "~2.0.0"
   },
   "scripts": {
     "precommit": "pretty-quick --staged",
