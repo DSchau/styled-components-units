@@ -2,36 +2,22 @@
   "name": "@dschau/styled-components-units",
   "private": true,
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:DSchau/styled-components-units.git",
+  "main": "n/a",
+  "repository": "https://github.com/dschau/styled-components-units.git",
   "author": "Dustin Schau <dustinschau@gmail.com> (https://dustinschau.com)",
   "license": "MIT",
   "devDependencies": {
     "husky": "~0.14.3",
     "markdown-magic": "~0.1.21",
     "prettier": "~1.13.0",
-    "pretty-quick": "~1.6.0"
+    "pretty-quick": "~1.6.0",
+    "strip-indent": "~2.0.0"
   },
   "scripts": {
     "precommit": "pretty-quick --staged",
-    "markdown": "md-magic --path README.md"
+    "markdown": "md-magic --path \"**/*.md\" --ignore \"node_modules\""
   },
   "workspaces": [
-    "01-getting-started-with-styling-components",
-    "02-your-first-styled-component",
-    "03-traditional-css",
-    "04-prop-injection",
-    "05-inheritance-and-composition",
-    "06-animation",
-    "07-usage-with-existing-libraries",
-    "08-injecting-globals",
-    "09-theming",
-    "10-server-rendering",
-    "11-utility-libraries",
-    "12-style-objects",
-    "13-when-not-to-use-css-in-js",
-    "14-css-modules",
-    "final",
-    "final-server-rendered"
+    "projects/*"
   ]
 }
