@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 
 import Layout from '../components/Layout';
 import NewPost from './NewPost';
-import Post from './Post';
+import Post, { PostStyle } from './Post';
 import Posts from './Posts';
 
 import THEME from '../style/theme';
@@ -30,6 +30,7 @@ export default class App extends Component {
     const theme = THEME[this.state.theme];
     return (
       <ThemeProvider theme={theme}>
+        <PostStyle />
         <Layout onThemeToggle={this.toggleTheme}>
           <Route path="/" component={Posts} exact />
           <Route path="/new" component={NewPost} exact />

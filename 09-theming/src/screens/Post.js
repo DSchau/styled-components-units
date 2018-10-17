@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { injectGlobal } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 import Post from '../components/Post';
 
@@ -24,7 +24,7 @@ export default function PostById({ match }) {
   );
 }
 
-injectGlobal`
+export const PostStyle = createGlobalStyle`
   .post h1 {
     margin: 0.5rem;
     padding-bottom: 0.25rem;
