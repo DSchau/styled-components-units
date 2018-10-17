@@ -1,4 +1,4 @@
-# Unit 02 - Your first styled component
+# Final (Server Rendered)
 
 <!-- AUTO-GENERATED-CONTENT:START (INSTRUCTIONS) -->
 

@@ -21,6 +21,6 @@ Click any of the links below to get started!
 - [When Not to Use CSS in JS](13-when-not-to-use-css-in-js/README.md)
 - [CSS Modules](14-css-modules/README.md)
 - [Automated tooling](15-automated-tooling/README.md)
-- [Unit 02 - Your first styled component](final/README.md)
-- [Unit 02 - Your first styled component](final-server-rendering/README.md)
+- [Final](final/README.md)
+- [Final (Server Rendered)](final-server-rendering/README.md)
   <!-- AUTO-GENERATED-CONTENT:END -->
