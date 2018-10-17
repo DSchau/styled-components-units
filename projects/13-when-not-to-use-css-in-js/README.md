@@ -31,6 +31,8 @@ Once dependencies are installed:
 [workspaces]: https://yarnpkg.com/lang/en/docs/workspaces/
 [code-sandbox]: https://codesandbox.io/
 
+---
+
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 Apple TV effect modeled after [this excellent CodePen][codepen]. Credit to Rosh Jutherford.

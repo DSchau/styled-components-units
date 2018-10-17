@@ -34,9 +34,10 @@ module.exports = {
 
         [![Edit ${folder}](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/DSchau/styled-components-units/tree/master/${folder})
 
-
         [workspaces]: https://yarnpkg.com/lang/en/docs/workspaces/
         [code-sandbox]: https://codesandbox.io/
+
+        ---
       `);
     },
     UNITS(content, options) {

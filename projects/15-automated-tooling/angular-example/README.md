@@ -31,6 +31,8 @@ Once dependencies are installed:
 [workspaces]: https://yarnpkg.com/lang/en/docs/workspaces/
 [code-sandbox]: https://codesandbox.io/
 
+---
+
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
