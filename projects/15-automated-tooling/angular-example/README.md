@@ -1,4 +1,4 @@
-# AngularExample
+# Angular Example
 
 <!-- AUTO-GENERATED-CONTENT:START (INSTRUCTIONS) -->
 
@@ -16,7 +16,7 @@ This will install all the necessary dependencies and get you up and running with
 
 Once dependencies are installed:
 
-1.  `cd projects/angular-example`
+1.  `cd projects/15-automated-tooling/angular-example/`
 1.  `yarn start` to start the local development server
 1.  Make changes in `src`, and the project will automatically reload!
 
@@ -26,7 +26,7 @@ Once dependencies are installed:
 
 [CodeSandbox][code-sandbox] is a great, online IDE that can simplify some of the pain of getting set up locally.
 
-[![Edit angular-example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/DSchau/styled-components-units/tree/master/projects/angular-example)
+[![Edit projects/15-automated-tooling/angular-example/](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/DSchau/styled-components-units/tree/master/projects/15-automated-tooling/angular-example/)
 
 [workspaces]: https://yarnpkg.com/lang/en/docs/workspaces/
 [code-sandbox]: https://codesandbox.io/
