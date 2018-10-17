@@ -16,7 +16,9 @@ Once dependencies are installed:
 
 ## Alternative Approach
 
-Consider using [CodeSandbox][code-sandbox] by [clicking this link](https://codesandbox.io/s/github/DSchau/styled-components-units/tree/master/projects/11-utility-libraries)
+[CodeSandbox][code-sandbox] is a great, online IDE that can simplify some of the pain of getting set up locally.
+
+[![Edit 11-utility-libraries](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/DSchau/styled-components-units/tree/master/projects/11-utility-libraries)
 
 [workspaces]: https://yarnpkg.com/lang/en/docs/workspaces/
 [code-sandbox]: https://codesandbox.io/

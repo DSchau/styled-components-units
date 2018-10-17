@@ -31,7 +31,10 @@ module.exports = {
 
         ## Alternative Approach
 
-        Consider using [CodeSandbox][code-sandbox] by [clicking this link](https://codesandbox.io/s/github/DSchau/styled-components-units/tree/master/projects/${folder})
+        [CodeSandbox][code-sandbox] is a great, online IDE that can simplify some of the pain of getting set up locally.
+
+        [![Edit ${folder}](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/DSchau/styled-components-units/tree/master/projects/${folder})
+
 
         [workspaces]: https://yarnpkg.com/lang/en/docs/workspaces/
         [code-sandbox]: https://codesandbox.io/
