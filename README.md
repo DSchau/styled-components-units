@@ -4,7 +4,7 @@ Contained within this repository are all the companion units (or lessons!) for l
 
 ## Units
 
-<!-- AUTO-GENERATED-CONTENT:START (UNITS:include=^\d+-.*$) -->
+<!-- AUTO-GENERATED-CONTENT:START (UNITS) -->
 
 - [Getting Started with styled-components](projects/01-getting-started-with-styled-components/README.md)
 - [Your First Styled Component](projects/02-your-first-styled-component/README.md)
@@ -21,6 +21,8 @@ Contained within this repository are all the companion units (or lessons!) for l
 - [When Not to Use CSS in JS](projects/13-when-not-to-use-css-in-js/README.md)
 - [CSS Modules](projects/14-css-modules/README.md)
 - [Automated tooling](projects/15-automated-tooling/README.md)
+- [Unit 02 - Your first styled component](projects/final/README.md)
+- [Unit 02 - Your first styled component](projects/final-server-rendering/README.md)
   <!-- AUTO-GENERATED-CONTENT:END -->
 
 [css-in-js-training]: https://css-in-js-training.dustinschau.com

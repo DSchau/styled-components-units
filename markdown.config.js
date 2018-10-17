@@ -40,23 +40,21 @@ module.exports = {
         ---
       `);
     },
-    UNITS(content, options) {
-      const expr = new RegExp(options.include);
-      const base = path.join(process.cwd(), `projects`);
+    UNITS(content, options, { originalPath }) {
+      const base = path.join(process.cwd(), 'projects');
+      const folder = originalPath.split(path.basename(originalPath)).shift();
+      const relative = path.relative(folder, base);
       const units = fs
         .readdirSync(base)
-        .filter(
-          fileOrDirectory =>
-            fs.statSync(path.join(base, fileOrDirectory)).isDirectory() &&
-            expr.test(fileOrDirectory)
+        .filter(fileOrDirectory =>
+          fs.statSync(path.join(base, fileOrDirectory)).isDirectory()
         )
         .map(unit => {
-          const fullTitle = fs
+          const [fullTitle] = fs
             .readFileSync(path.join(base, unit, 'README.md'), 'utf8')
-            .split('\n')
-            .shift();
+            .split('\n');
           const title = fullTitle.slice(fullTitle.indexOf('#') + 1).trim();
-          return `- [${title}](projects/${unit}/README.md)`;
+          return `- [${title}](${path.join(relative, unit, 'README.md')})`;
         });
 
       return units.join('\n');
